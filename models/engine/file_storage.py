@@ -3,12 +3,12 @@ import json
 import os
 import models
 from models.base_model import BaseModel
-# from models.user import User
-# from models.state import State
-# from models.city import City
-# from models.place import Place
-# from models.amenity import Amenity
-# from models.review import Review
+from models.user import User
+from models.state import State
+from models.city import City
+from models.place import Place
+from models.amenity import Amenity
+from models.review import Review
 """
     file_storage module contains the class
     for the serialization/deserialization of data
@@ -45,7 +45,7 @@ class FileStorage():
         for key, value in object.items():
             content[key] = value.to_dict()
 
-        with open(file, 'w', encoding='utf-8'):
+        with open(file, 'w', encoding='utf-8') as f:
             return f.write(json.dumps(content))
 
     def reload(self):

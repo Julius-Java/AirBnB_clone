@@ -62,11 +62,12 @@
     border: 1px solid #DDDDDD;
     border-radius: 4px;
     font-size: 16px;
-    padding-bottom: 10px;
+    padding: 30px;
     margin-top: 0px;
     list-style-type: none;
-    position: absolute;
-    width: 84%;
+    /* position: absolute; */
+    width: 100%;
+    z-index: 9;
 }
 
 .popover h2 {
@@ -78,6 +79,6 @@
     list-style-type: none;
 }
 
-.amenities .popover {
-    padding-top: 10px;
+.amenities .popover li {
+    margin: 5px;
 }
